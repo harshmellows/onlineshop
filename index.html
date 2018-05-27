@@ -1,1393 +1,559 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="us">
 <head>
-	<title>Home</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	</style>
 </head>
-<body class="animsition">
-
-	<!-- Header -->
-	<header class="header1">
-		<!-- Header desktop -->
-		<div class="container-menu-header">
-			<div class="topbar">
-				<div class="topbar-social">
-					<a href="#" class="topbar-social-item fa fa-facebook"></a>
-					<a href="#" class="topbar-social-item fa fa-instagram"></a>
-					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-				</div>
-
-				<span class="topbar-child1">
-					Free shipping for standard order over $100
-				</span>
-
-				<div class="topbar-child2">
-					<span class="topbar-email">
-						fashe@example.com
-					</span>
-
-					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-							<option>EUR</option>
-						</select>
-					</div>
-				</div>
-			</div>
-
-			<div class="wrap_header">
-				<!-- Logo -->
-				<a href="index.html" class="logo">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
-				</a>
-
-				<!-- Menu -->
-				<div class="wrap_menu">
-					<nav class="menu">
-						<ul class="main_menu">
-							<li>
-								<a href="index.html">Home</a>
-								<ul class="sub_menu">
-									<li><a href="index.html">Homepage V1</a></li>
-									<li><a href="home-02.html">Homepage V2</a></li>
-									<li><a href="home-03.html">Homepage V3</a></li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="product.html">Shop</a>
-							</li>
-
-							<li class="sale-noti">
-								<a href="product.html">Sale</a>
-							</li>
-
-							<li>
-								<a href="cart.html">Features</a>
-							</li>
-
-							<li>
-								<a href="blog.html">Blog</a>
-							</li>
-
-							<li>
-								<a href="about.html">About</a>
-							</li>
-
-							<li>
-								<a href="contact.html">Contact</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
-				<!-- Header Icon -->
-				<div class="header-icons">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-					</a>
-
-					<span class="linedivide1"></span>
-
-					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
-
-						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
-							</ul>
-
-							<div class="header-cart-total">
-								Total: $75.00
-							</div>
-
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										View Cart
-									</a>
-								</div>
-
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Header Mobile -->
-		<div class="wrap_header_mobile">
-			<!-- Logo moblie -->
-			<a href="index.html" class="logo-mobile">
-				<img src="images/icons/logo.png" alt="IMG-LOGO">
-			</a>
-
-			<!-- Button show menu -->
-			<div class="btn-show-menu">
-				<!-- Header Icon mobile -->
-				<div class="header-icons-mobile">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-					</a>
-
-					<span class="linedivide2"></span>
-
-					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
-
-						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
-							</ul>
-
-							<div class="header-cart-total">
-								Total: $75.00
-							</div>
-
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										View Cart
-									</a>
-								</div>
-
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</div>
-			</div>
-		</div>
-
-		<!-- Menu Mobile -->
-		<div class="wrap-side-menu" >
-			<nav class="side-menu">
-				<ul class="main-menu">
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							Free shipping for standard order over $100
-						</span>
-					</li>
-
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<div class="topbar-child2-mobile">
-							<span class="topbar-email">
-								fashe@example.com
-							</span>
-
-							<div class="topbar-language rs1-select2">
-								<select class="selection-1" name="time">
-									<option>USD</option>
-									<option>EUR</option>
-								</select>
-							</div>
-						</div>
-					</li>
-
-					<li class="item-topbar-mobile p-l-10">
-						<div class="topbar-social-mobile">
-							<a href="#" class="topbar-social-item fa fa-facebook"></a>
-							<a href="#" class="topbar-social-item fa fa-instagram"></a>
-							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-						</div>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="index.html">Home</a>
-						<ul class="sub-menu">
-							<li><a href="index.html">Homepage V1</a></li>
-							<li><a href="home-02.html">Homepage V2</a></li>
-							<li><a href="home-03.html">Homepage V3</a></li>
-						</ul>
-						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="product.html">Shop</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="product.html">Sale</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="cart.html">Features</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="blog.html">Blog</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="about.html">About</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="contact.html">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-
-	<!-- Slide1 -->
-	<section class="slide1">
-		<div class="wrap-slick1">
-			<div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(images/master-slide-02.jpg);">
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-							Women Collection 2018
-						</span>
-
-						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-							New arrivals
-						</h2>
-
-						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
-							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="item-slick1 item2-slick1" style="background-image: url(images/master-slide-03.jpg);">
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
-							Women Collection 2018
-						</span>
-
-						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
-							New arrivals
-						</h2>
-
-						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
-							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="item-slick1 item3-slick1" style="background-image: url(images/master-slide-04.jpg);">
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-							Women Collection 2018
-						</span>
-
-						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
-							New arrivals
-						</h2>
-
-						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
-							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
-							</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-	<!-- Banner -->
-	<section class="banner bgwhite p-t-40 p-b-40">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
-					<!-- block1 -->
-					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/banner-02.jpg" alt="IMG-BENNER">
-
-						<div class="block1-wrapbtn w-size2">
-							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Dresses
-							</a>
-						</div>
-					</div>
-
-					<!-- block1 -->
-					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/banner-05.jpg" alt="IMG-BENNER">
-
-						<div class="block1-wrapbtn w-size2">
-							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Sunglasses
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
-					<!-- block1 -->
-					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/banner-03.jpg" alt="IMG-BENNER">
-
-						<div class="block1-wrapbtn w-size2">
-							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Watches
-							</a>
-						</div>
-					</div>
-
-					<!-- block1 -->
-					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/banner-07.jpg" alt="IMG-BENNER">
-
-						<div class="block1-wrapbtn w-size2">
-							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Footerwear
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
-					<!-- block1 -->
-					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/banner-04.jpg" alt="IMG-BENNER">
-
-						<div class="block1-wrapbtn w-size2">
-							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Bags
-							</a>
-						</div>
-					</div>
-
-					<!-- block2 -->
-					<div class="block2 wrap-pic-w pos-relative m-b-30">
-						<img src="images/icons/bg-01.jpg" alt="IMG">
-
-						<div class="block2-content sizefull ab-t-l flex-col-c-m">
-							<h4 class="m-text4 t-center w-size3 p-b-8">
-								Sign up & get 20% off
-							</h4>
-
-							<p class="t-center w-size4">
-								Be the frist to know about the latest fashion news and get exclu-sive offers
-							</p>
-
-							<div class="w-size2 p-t-25">
-								<!-- Button -->
-								<a href="#" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-									Sign Up
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- New Product -->
-	<section class="newproduct bgwhite p-t-45 p-b-105">
-		<div class="container">
-			<div class="sec-title p-b-60">
-				<h3 class="m-text5 t-center">
-					Featured Products
-				</h3>
-			</div>
-
-			<!-- Slide2 -->
-			<div class="wrap-slick2">
-				<div class="slick2">
-
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/item-02.jpg" alt="IMG-PRODUCT">
-
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-									Herschel supply co 25l
-								</a>
-
-								<span class="block2-price m-text6 p-r-5">
-									$75.00
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-03.jpg" alt="IMG-PRODUCT">
-
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-									Denim jacket blue
-								</a>
-
-								<span class="block2-price m-text6 p-r-5">
-									$92.50
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-05.jpg" alt="IMG-PRODUCT">
-
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-									Coach slim easton black
-								</a>
-
-								<span class="block2-price m-text6 p-r-5">
-									$165.90
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-								<img src="images/item-07.jpg" alt="IMG-PRODUCT">
-
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-									Frayed denim shorts
-								</a>
-
-								<span class="block2-oldprice m-text7 p-r-5">
-									$29.50
-								</span>
-
-								<span class="block2-newprice m-text8 p-r-5">
-									$15.90
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/item-02.jpg" alt="IMG-PRODUCT">
-
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-									Herschel supply co 25l
-								</a>
-
-								<span class="block2-price m-text6 p-r-5">
-									$75.00
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-03.jpg" alt="IMG-PRODUCT">
-
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-									Denim jacket blue
-								</a>
-
-								<span class="block2-price m-text6 p-r-5">
-									$92.50
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-05.jpg" alt="IMG-PRODUCT">
-
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-									Coach slim easton black
-								</a>
-
-								<span class="block2-price m-text6 p-r-5">
-									$165.90
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-								<img src="images/item-07.jpg" alt="IMG-PRODUCT">
-
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="block2-txt p-t-20">
-								<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-									Frayed denim shorts
-								</a>
-
-								<span class="block2-oldprice m-text7 p-r-5">
-									$29.50
-								</span>
-
-								<span class="block2-newprice m-text8 p-r-5">
-									$15.90
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<!-- Banner2 -->
-	<section class="banner2 bg5 p-t-55 p-b-55">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto p-t-15 p-b-15">
-					<div class="hov-img-zoom pos-relative">
-						<img src="images/banner-08.jpg" alt="IMG-BANNER">
-
-						<div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
-							<span class="m-text9 p-t-45 fs-20-sm">
-								The Beauty
-							</span>
-
-							<h3 class="l-text1 fs-35-sm">
-								Lookbook
-							</h3>
-
-							<a href="#" class="s-text4 hov2 p-t-20 ">
-								View Collection
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto p-t-15 p-b-15">
-					<div class="bgwhite hov-img-zoom pos-relative p-b-20per-ssm">
-						<img src="images/shop-item-09.jpg" alt="IMG-BANNER">
-
-						<div class="ab-t-l sizefull flex-col-c-b p-l-15 p-r-15 p-b-20">
-							<div class="t-center">
-								<a href="product-detail.html" class="dis-block s-text3 p-b-5">
-									Gafas sol Hawkers one
-								</a>
-
-								<span class="block2-oldprice m-text7 p-r-5">
-									$29.50
-								</span>
-
-								<span class="block2-newprice m-text8">
-									$15.90
-								</span>
-							</div>
-
-							<div class="flex-c-m p-t-44 p-t-30-xl">
-								<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
-									<span class="m-text10 p-b-1 days">
-										69
-									</span>
-
-									<span class="s-text5">
-										days
-									</span>
-								</div>
-
-								<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
-									<span class="m-text10 p-b-1 hours">
-										04
-									</span>
-
-									<span class="s-text5">
-										hrs
-									</span>
-								</div>
-
-								<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
-									<span class="m-text10 p-b-1 minutes">
-										32
-									</span>
-
-									<span class="s-text5">
-										mins
-									</span>
-								</div>
-
-								<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
-									<span class="m-text10 p-b-1 seconds">
-										05
-									</span>
-
-									<span class="s-text5">
-										secs
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<!-- Blog -->
-	<section class="blog bgwhite p-t-94 p-b-65">
-		<div class="container">
-			<div class="sec-title p-b-52">
-				<h3 class="m-text5 t-center">
-					Our Blog
-				</h3>
-			</div>
-
-			<div class="row">
-				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="block3">
-						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-01.jpg" alt="IMG-BLOG">
-						</a>
-
-						<div class="block3-txt p-t-14">
-							<h4 class="p-b-7">
-								<a href="blog-detail.html" class="m-text11">
-									Black Friday Guide: Best Sales & Discount Codes
-								</a>
-							</h4>
-
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
-
-							<p class="s-text8 p-t-16">
-								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="block3">
-						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-02.jpg" alt="IMG-BLOG">
-						</a>
-
-						<div class="block3-txt p-t-14">
-							<h4 class="p-b-7">
-								<a href="blog-detail.html" class="m-text11">
-									The White Sneakers Nearly Every Fashion Girls Own
-								</a>
-							</h4>
-
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 18, 2017</span>
-
-							<p class="s-text8 p-t-16">
-								Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit ame
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="block3">
-						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-03.jpg" alt="IMG-BLOG">
-						</a>
-
-						<div class="block3-txt p-t-14">
-							<h4 class="p-b-7">
-								<a href="blog-detail.html" class="m-text11">
-									New York SS 2018 Street Style: Annina Mislin
-								</a>
-							</h4>
-
-							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-							<span class="s-text6">on</span> <span class="s-text7">July 2, 2017</span>
-
-							<p class="s-text8 p-t-16">
-								Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Instagram -->
-	<section class="instagram p-t-20">
-		<div class="sec-title p-b-52 p-l-15 p-r-15">
-			<h3 class="m-text5 t-center">
-				@ follow us on Instagram
-			</h3>
-		</div>
-
-		<div class="flex-w">
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-03.jpg" alt="IMG-INSTAGRAM">
-
-				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-						<span class="p-t-2">39</span>
-					</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
-						</p>
-
-						<span class="s-text9">
-							Photo by @nancyward
-						</span>
-					</div>
-				</a>
-			</div>
-
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-07.jpg" alt="IMG-INSTAGRAM">
-
-				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-						<span class="p-t-2">39</span>
-					</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
-						</p>
-
-						<span class="s-text9">
-							Photo by @nancyward
-						</span>
-					</div>
-				</a>
-			</div>
-
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-09.jpg" alt="IMG-INSTAGRAM">
-
-				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-						<span class="p-t-2">39</span>
-					</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
-						</p>
-
-						<span class="s-text9">
-							Photo by @nancyward
-						</span>
-					</div>
-				</a>
-			</div>
-
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-13.jpg" alt="IMG-INSTAGRAM">
-
-				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-						<span class="p-t-2">39</span>
-					</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
-						</p>
-
-						<span class="s-text9">
-							Photo by @nancyward
-						</span>
-					</div>
-				</a>
-			</div>
-
-			<!-- Block4 -->
-			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-15.jpg" alt="IMG-INSTAGRAM">
-
-				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-						<span class="p-t-2">39</span>
-					</span>
-
-					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
-						</p>
-
-						<span class="s-text9">
-							Photo by @nancyward
-						</span>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-
-	<!-- Shipping -->
-	<section class="shipping bgwhite p-t-62 p-b-46">
-		<div class="flex-w p-l-15 p-r-15">
-			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
-				<h4 class="m-text12 t-center">
-					Free Delivery Worldwide
-				</h4>
-
-				<a href="#" class="s-text11 t-center">
-					Click here for more info
-				</a>
-			</div>
-
-			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
-				<h4 class="m-text12 t-center">
-					30 Days Return
-				</h4>
-
-				<span class="s-text11 t-center">
-					Simply return it within 30 days for an exchange.
-				</span>
-			</div>
-
-			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
-				<h4 class="m-text12 t-center">
-					Store Opening
-				</h4>
-
-				<span class="s-text11 t-center">
-					Shop open from Monday to Sunday
-				</span>
-			</div>
-		</div>
-	</section>
-
-
-	<!-- Footer -->
-	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
-		<div class="flex-w p-b-90">
-			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
-				<h4 class="s-text12 p-b-30">
-					GET IN TOUCH
-				</h4>
-
-				<div>
-					<p class="s-text7 w-size27">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-					</p>
-
-					<div class="flex-m p-t-30">
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
-					Categories
-				</h4>
-
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Men
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Women
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Dresses
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Sunglasses
-						</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
-					Links
-				</h4>
-
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Search
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							About Us
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Contact Us
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Returns
-						</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
-					Help
-				</h4>
-
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Track Order
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Returns
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Shipping
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							FAQs
-						</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
-				<h4 class="s-text12 p-b-30">
-					Newsletter
-				</h4>
-
-				<form>
-					<div class="effect1 w-size9">
-						<input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
-						<span class="effect1-line"></span>
-					</div>
-
-					<div class="w-size2 p-t-20">
-						<!-- Button -->
-						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-							Subscribe
-						</button>
-					</div>
-
-				</form>
-			</div>
-		</div>
-
-		<div class="t-center p-l-15 p-r-15">
-			<a href="#">
-				<img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER">
-			</a>
-
-			<div class="t-center s-text8 p-t-20">
-				Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-			</div>
-		</div>
-	</footer>
-
-
-
-	<!-- Back to top -->
-	<div class="btn-back-to-top bg0-hov" id="myBtn">
-		<span class="symbol-btn-back-to-top">
-			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-		</span>
+<body>
+
+<h1>Welcome to jQuery UI!</h1>
+
+<div class="ui-widget">
+	<p>This page demonstrates the widgets and theme you selected in Download Builder. Please make sure you are using them with a compatible jQuery version.</p>
+</div>
+
+<h1>YOUR COMPONENTS:</h1>
+
+
+<!-- Accordion -->
+<h2 class="demoHeaders">Accordion</h2>
+<div id="accordion">
+	<h3>First</h3>
+	<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+	<h3>Second</h3>
+	<div>Phasellus mattis tincidunt nibh.</div>
+	<h3>Third</h3>
+	<div>Nam dui erat, auctor a, dignissim quis.</div>
+</div>
+
+
+
+<!-- Autocomplete -->
+<h2 class="demoHeaders">Autocomplete</h2>
+<div>
+	<input id="autocomplete" title="type &quot;a&quot;">
+</div>
+
+
+
+<!-- Button -->
+<h2 class="demoHeaders">Button</h2>
+<button id="button">A button element</button>
+<button id="button-icon">An icon-only button</button>
+
+
+
+<!-- Checkboxradio -->
+<h2 class="demoHeaders">Checkboxradio</h2>
+<form style="margin-top: 1em;">
+	<div id="radioset">
+		<input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+		<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+		<input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
+	</div>
+</form>
+
+
+
+<!-- Controlgroup -->
+<h2 class="demoHeaders">Controlgroup</h2>
+<fieldset>
+	<legend>Rental Car</legend>
+	<div id="controlgroup">
+		<select id="car-type">
+			<option>Compact car</option>
+			<option>Midsize car</option>
+			<option>Full size car</option>
+			<option>SUV</option>
+			<option>Luxury</option>
+			<option>Truck</option>
+			<option>Van</option>
+		</select>
+		<label for="transmission-standard">Standard</label>
+		<input type="radio" name="transmission" id="transmission-standard">
+		<label for="transmission-automatic">Automatic</label>
+		<input type="radio" name="transmission" id="transmission-automatic">
+		<label for="insurance">Insurance</label>
+		<input type="checkbox" name="insurance" id="insurance">
+		<label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+		<input id="horizontal-spinner" class="ui-spinner-input">
+		<button>Book Now!</button>
+	</div>
+</fieldset>
+
+
+
+<!-- Tabs -->
+<h2 class="demoHeaders">Tabs</h2>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">First</a></li>
+		<li><a href="#tabs-2">Second</a></li>
+		<li><a href="#tabs-3">Third</a></li>
+	</ul>
+	<div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+	<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+	<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+</div>
+
+
+
+<h2 class="demoHeaders">Dialog</h2>
+<p>
+	<button id="dialog-link" class="ui-button ui-corner-all ui-widget">
+		<span class="ui-icon ui-icon-newwin"></span>Open Dialog
+	</button>
+</p>
+
+<h2 class="demoHeaders">Overlay and Shadow Classes</h2>
+<div style="position: relative; width: 96%; height: 200px; padding:1% 2%; overflow:hidden;" class="fakewindowcontain">
+	<p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. </p><p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. </p><p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. </p><p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. </p>
+
+	<!-- ui-dialog -->
+	<div class="ui-widget-overlay ui-front"></div>
+	<div style="position: absolute; width: 320px; left: 50px; top: 30px; padding: 1.2em" class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 	</div>
 
-	<!-- Container Selection1 -->
-	<div id="dropDownSelect1"></div>
+</div>
+
+<!-- ui-dialog -->
+<div id="dialog" title="Dialog Title">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
 
 
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
-	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
-	<script type="text/javascript">
-		$(".selection-1").select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $('#dropDownSelect1')
-		});
-	</script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/slick-custom.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
-	<script type="text/javascript">
-		$('.block2-btn-addcart').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to cart !", "success");
-			});
-		});
+<h2 class="demoHeaders">Framework Icons (content color preview)</h2>
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-n"><span class="ui-icon ui-icon-caret-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-ne"><span class="ui-icon ui-icon-caret-1-ne"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-e"><span class="ui-icon ui-icon-caret-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-se"><span class="ui-icon ui-icon-caret-1-se"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-s"><span class="ui-icon ui-icon-caret-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-sw"><span class="ui-icon ui-icon-caret-1-sw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-w"><span class="ui-icon ui-icon-caret-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-nw"><span class="ui-icon ui-icon-caret-1-nw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-2-n-s"><span class="ui-icon ui-icon-caret-2-n-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-2-e-w"><span class="ui-icon ui-icon-caret-2-e-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-n"><span class="ui-icon ui-icon-triangle-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-ne"><span class="ui-icon ui-icon-triangle-1-ne"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-e"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-se"><span class="ui-icon ui-icon-triangle-1-se"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-s"><span class="ui-icon ui-icon-triangle-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-sw"><span class="ui-icon ui-icon-triangle-1-sw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-w"><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-nw"><span class="ui-icon ui-icon-triangle-1-nw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-2-n-s"><span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-2-e-w"><span class="ui-icon ui-icon-triangle-2-e-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-n"><span class="ui-icon ui-icon-arrow-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-ne"><span class="ui-icon ui-icon-arrow-1-ne"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-e"><span class="ui-icon ui-icon-arrow-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-se"><span class="ui-icon ui-icon-arrow-1-se"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-s"><span class="ui-icon ui-icon-arrow-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-sw"><span class="ui-icon ui-icon-arrow-1-sw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-w"><span class="ui-icon ui-icon-arrow-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-nw"><span class="ui-icon ui-icon-arrow-1-nw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-n-s"><span class="ui-icon ui-icon-arrow-2-n-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-ne-sw"><span class="ui-icon ui-icon-arrow-2-ne-sw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-e-w"><span class="ui-icon ui-icon-arrow-2-e-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-se-nw"><span class="ui-icon ui-icon-arrow-2-se-nw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-n"><span class="ui-icon ui-icon-arrowstop-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-e"><span class="ui-icon ui-icon-arrowstop-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-s"><span class="ui-icon ui-icon-arrowstop-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-w"><span class="ui-icon ui-icon-arrowstop-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-n"><span class="ui-icon ui-icon-arrowthick-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-ne"><span class="ui-icon ui-icon-arrowthick-1-ne"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-e"><span class="ui-icon ui-icon-arrowthick-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-se"><span class="ui-icon ui-icon-arrowthick-1-se"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-s"><span class="ui-icon ui-icon-arrowthick-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-sw"><span class="ui-icon ui-icon-arrowthick-1-sw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-w"><span class="ui-icon ui-icon-arrowthick-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-nw"><span class="ui-icon ui-icon-arrowthick-1-nw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-n-s"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-ne-sw"><span class="ui-icon ui-icon-arrowthick-2-ne-sw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-e-w"><span class="ui-icon ui-icon-arrowthick-2-e-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-se-nw"><span class="ui-icon ui-icon-arrowthick-2-se-nw"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-n"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-e"><span class="ui-icon ui-icon-arrowthickstop-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-s"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-w"><span class="ui-icon ui-icon-arrowthickstop-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-w"><span class="ui-icon ui-icon-arrowreturnthick-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-n"><span class="ui-icon ui-icon-arrowreturnthick-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-e"><span class="ui-icon ui-icon-arrowreturnthick-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-s"><span class="ui-icon ui-icon-arrowreturnthick-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-w"><span class="ui-icon ui-icon-arrowreturn-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-n"><span class="ui-icon ui-icon-arrowreturn-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-e"><span class="ui-icon ui-icon-arrowreturn-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-s"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-w"><span class="ui-icon ui-icon-arrowrefresh-1-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-n"><span class="ui-icon ui-icon-arrowrefresh-1-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-e"><span class="ui-icon ui-icon-arrowrefresh-1-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-s"><span class="ui-icon ui-icon-arrowrefresh-1-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-4"><span class="ui-icon ui-icon-arrow-4"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-4-diag"><span class="ui-icon ui-icon-arrow-4-diag"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-extlink"><span class="ui-icon ui-icon-extlink"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-newwin"><span class="ui-icon ui-icon-newwin"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-refresh"><span class="ui-icon ui-icon-refresh"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-shuffle"><span class="ui-icon ui-icon-shuffle"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-transfer-e-w"><span class="ui-icon ui-icon-transfer-e-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-transferthick-e-w"><span class="ui-icon ui-icon-transferthick-e-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-folder-collapsed"><span class="ui-icon ui-icon-folder-collapsed"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-folder-open"><span class="ui-icon ui-icon-folder-open"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-document"><span class="ui-icon ui-icon-document"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-document-b"><span class="ui-icon ui-icon-document-b"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-note"><span class="ui-icon ui-icon-note"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-mail-closed"><span class="ui-icon ui-icon-mail-closed"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-mail-open"><span class="ui-icon ui-icon-mail-open"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-suitcase"><span class="ui-icon ui-icon-suitcase"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-comment"><span class="ui-icon ui-icon-comment"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-person"><span class="ui-icon ui-icon-person"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-print"><span class="ui-icon ui-icon-print"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-trash"><span class="ui-icon ui-icon-trash"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-locked"><span class="ui-icon ui-icon-locked"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-unlocked"><span class="ui-icon ui-icon-unlocked"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-bookmark"><span class="ui-icon ui-icon-bookmark"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-tag"><span class="ui-icon ui-icon-tag"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-home"><span class="ui-icon ui-icon-home"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-flag"><span class="ui-icon ui-icon-flag"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-calculator"><span class="ui-icon ui-icon-calculator"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-cart"><span class="ui-icon ui-icon-cart"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-pencil"><span class="ui-icon ui-icon-pencil"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-clock"><span class="ui-icon ui-icon-clock"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-disk"><span class="ui-icon ui-icon-disk"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-calendar"><span class="ui-icon ui-icon-calendar"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-zoomin"><span class="ui-icon ui-icon-zoomin"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-zoomout"><span class="ui-icon ui-icon-zoomout"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-search"><span class="ui-icon ui-icon-search"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-wrench"><span class="ui-icon ui-icon-wrench"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-gear"><span class="ui-icon ui-icon-gear"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-heart"><span class="ui-icon ui-icon-heart"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-link"><span class="ui-icon ui-icon-link"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-cancel"><span class="ui-icon ui-icon-cancel"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-plus"><span class="ui-icon ui-icon-plus"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-plusthick"><span class="ui-icon ui-icon-plusthick"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-minus"><span class="ui-icon ui-icon-minus"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-minusthick"><span class="ui-icon ui-icon-minusthick"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-close"><span class="ui-icon ui-icon-close"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-closethick"><span class="ui-icon ui-icon-closethick"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-key"><span class="ui-icon ui-icon-key"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-lightbulb"><span class="ui-icon ui-icon-lightbulb"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-scissors"><span class="ui-icon ui-icon-scissors"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-clipboard"><span class="ui-icon ui-icon-clipboard"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-copy"><span class="ui-icon ui-icon-copy"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-contact"><span class="ui-icon ui-icon-contact"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-image"><span class="ui-icon ui-icon-image"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-video"><span class="ui-icon ui-icon-video"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-script"><span class="ui-icon ui-icon-script"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-alert"><span class="ui-icon ui-icon-alert"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-info"><span class="ui-icon ui-icon-info"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-notice"><span class="ui-icon ui-icon-notice"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-help"><span class="ui-icon ui-icon-help"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-check"><span class="ui-icon ui-icon-check"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-bullet"><span class="ui-icon ui-icon-bullet"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-radio-off"><span class="ui-icon ui-icon-radio-off"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-radio-on"><span class="ui-icon ui-icon-radio-on"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-pin-w"><span class="ui-icon ui-icon-pin-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-pin-s"><span class="ui-icon ui-icon-pin-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-play"><span class="ui-icon ui-icon-play"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-pause"><span class="ui-icon ui-icon-pause"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-seek-next"><span class="ui-icon ui-icon-seek-next"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-seek-prev"><span class="ui-icon ui-icon-seek-prev"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-seek-end"><span class="ui-icon ui-icon-seek-end"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-seek-first"><span class="ui-icon ui-icon-seek-first"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-stop"><span class="ui-icon ui-icon-stop"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-eject"><span class="ui-icon ui-icon-eject"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-volume-off"><span class="ui-icon ui-icon-volume-off"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-volume-on"><span class="ui-icon ui-icon-volume-on"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-power"><span class="ui-icon ui-icon-power"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-signal-diag"><span class="ui-icon ui-icon-signal-diag"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-signal"><span class="ui-icon ui-icon-signal"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-battery-0"><span class="ui-icon ui-icon-battery-0"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-battery-1"><span class="ui-icon ui-icon-battery-1"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-battery-2"><span class="ui-icon ui-icon-battery-2"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-battery-3"><span class="ui-icon ui-icon-battery-3"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-plus"><span class="ui-icon ui-icon-circle-plus"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-minus"><span class="ui-icon ui-icon-circle-minus"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-close"><span class="ui-icon ui-icon-circle-close"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-e"><span class="ui-icon ui-icon-circle-triangle-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-s"><span class="ui-icon ui-icon-circle-triangle-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-w"><span class="ui-icon ui-icon-circle-triangle-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-n"><span class="ui-icon ui-icon-circle-triangle-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-e"><span class="ui-icon ui-icon-circle-arrow-e"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-s"><span class="ui-icon ui-icon-circle-arrow-s"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-w"><span class="ui-icon ui-icon-circle-arrow-w"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-n"><span class="ui-icon ui-icon-circle-arrow-n"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-zoomin"><span class="ui-icon ui-icon-circle-zoomin"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-zoomout"><span class="ui-icon ui-icon-circle-zoomout"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-check"><span class="ui-icon ui-icon-circle-check"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-plus"><span class="ui-icon ui-icon-circlesmall-plus"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-minus"><span class="ui-icon ui-icon-circlesmall-minus"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-close"><span class="ui-icon ui-icon-circlesmall-close"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-plus"><span class="ui-icon ui-icon-squaresmall-plus"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-minus"><span class="ui-icon ui-icon-squaresmall-minus"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-close"><span class="ui-icon ui-icon-squaresmall-close"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-dotted-vertical"><span class="ui-icon ui-icon-grip-dotted-vertical"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-dotted-horizontal"><span class="ui-icon ui-icon-grip-dotted-horizontal"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-solid-vertical"><span class="ui-icon ui-icon-grip-solid-vertical"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-solid-horizontal"><span class="ui-icon ui-icon-grip-solid-horizontal"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-gripsmall-diagonal-se"><span class="ui-icon ui-icon-gripsmall-diagonal-se"></span></li>
+	<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-diagonal-se"><span class="ui-icon ui-icon-grip-diagonal-se"></span></li>
+</ul>
 
-		$('.block2-btn-addwishlist').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
-			});
-		});
-	</script>
 
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+<!-- Slider -->
+<h2 class="demoHeaders">Slider</h2>
+<div id="slider"></div>
 
+
+
+<!-- Datepicker -->
+<h2 class="demoHeaders">Datepicker</h2>
+<div id="datepicker"></div>
+
+
+
+<!-- Progressbar -->
+<h2 class="demoHeaders">Progressbar</h2>
+<div id="progressbar"></div>
+
+
+
+<!-- Progressbar -->
+<h2 class="demoHeaders">Selectmenu</h2>
+<select id="selectmenu">
+	<option>Slower</option>
+	<option>Slow</option>
+	<option selected="selected">Medium</option>
+	<option>Fast</option>
+	<option>Faster</option>
+</select>
+
+
+
+<!-- Spinner -->
+<h2 class="demoHeaders">Spinner</h2>
+<input id="spinner">
+
+
+
+<!-- Menu -->
+<h2 class="demoHeaders">Menu</h2>
+<ul style="width:100px;" id="menu">
+	<li><div>Item 1</div></li>
+	<li><div>Item 2</div></li>
+	<li><div>Item 3</div>
+		<ul>
+			<li><div>Item 3-1</div></li>
+			<li><div>Item 3-2</div></li>
+			<li><div>Item 3-3</div></li>
+			<li><div>Item 3-4</div></li>
+			<li><div>Item 3-5</div></li>
+		</ul>
+	</li>
+	<li><div>Item 4</div></li>
+	<li><div>Item 5</div></li>
+</ul>
+
+
+
+<!-- Tooltip -->
+<h2 class="demoHeaders">Tooltip</h2>
+<p id="tooltip">
+	<a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you hover
+the element with your mouse, the title attribute is displayed in a little box next to the element, just like a native tooltip.
+</p>
+
+
+<!-- Highlight / Error -->
+<h2 class="demoHeaders">Highlight / Error</h2>
+<div class="ui-widget">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+		<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+		<strong>Hey!</strong> Sample ui-state-highlight style.</p>
+	</div>
+</div>
+<br>
+<div class="ui-widget">
+	<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+		<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+		<strong>Alert:</strong> Sample ui-state-error style.</p>
+	</div>
+</div>
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+
+$( "#accordion" ).accordion();
+
+
+
+var availableTags = [
+	"ActionScript",
+	"AppleScript",
+	"Asp",
+	"BASIC",
+	"C",
+	"C++",
+	"Clojure",
+	"COBOL",
+	"ColdFusion",
+	"Erlang",
+	"Fortran",
+	"Groovy",
+	"Haskell",
+	"Java",
+	"JavaScript",
+	"Lisp",
+	"Perl",
+	"PHP",
+	"Python",
+	"Ruby",
+	"Scala",
+	"Scheme"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+
+
+$( "#button" ).button();
+$( "#button-icon" ).button({
+	icon: "ui-icon-gear",
+	showLabel: false
+});
+
+
+
+$( "#radioset" ).buttonset();
+
+
+
+$( "#controlgroup" ).controlgroup();
+
+
+
+$( "#tabs" ).tabs();
+
+
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+
+
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+
+
+$( "#slider" ).slider({
+	range: true,
+	values: [ 17, 67 ]
+});
+
+
+
+$( "#progressbar" ).progressbar({
+	value: 20
+});
+
+
+
+$( "#spinner" ).spinner();
+
+
+
+$( "#menu" ).menu();
+
+
+
+$( "#tooltip" ).tooltip();
+
+
+
+$( "#selectmenu" ).selectmenu();
+
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
 </body>
 </html>
